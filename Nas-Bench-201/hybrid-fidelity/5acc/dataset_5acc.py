@@ -12,12 +12,12 @@ import glob
 import argparse
 
 DATA_CONFIG = {
-    'cifar10': {'classes': 10, 'mean': [0.4914, 0.4822, 0.4465], 'std': [0.2471, 0.2435, 0.2616],'path': 'cifar10_extracted'},
-    'cifar100': {'classes': 100, 'mean': [0.5071, 0.4867, 0.4408], 'std': [0.2675, 0.2565, 0.2761],'path': 'cifar100_extracted'},
+    'cifar10': {'classes': 10, 'mean': [0.4914, 0.4822, 0.4465], 'std': [0.2471, 0.2435, 0.2616],'path': 'cifar10'},
+    'cifar100': {'classes': 100, 'mean': [0.5071, 0.4867, 0.4408], 'std': [0.2675, 0.2565, 0.2761],'path': 'cifar100'},
     'mnist': {'classes': 10, 'mean': [0.1307], 'std': [0.3081], 'path': 'MNIST'},
-    'svhn': {'classes': 10, 'mean': [0.4377, 0.4438, 0.4728], 'std': [0.1980, 0.2010, 0.1970], 'path': 'svhn'},
-    'aircraft': {'classes': 100, 'mean': [0.485, 0.456, 0.406], 'std': [0.229, 0.224, 0.225],'path': 'FGVC Aircraft/images_y'},
-    'pets': {'classes': 37, 'mean': [0.485, 0.456, 0.406], 'std': [0.229, 0.224, 0.225], 'path': 'Oxford/images'}
+    'svhn': {'classes': 10, 'mean': [0.4377, 0.4438, 0.4728], 'std': [0.1980, 0.2010, 0.1970], 'path': 'SVHN'},
+    'aircraft': {'classes': 100, 'mean': [0.485, 0.456, 0.406], 'std': [0.229, 0.224, 0.225],'path': 'FGVC Aircraft'},
+    'pets': {'classes': 37, 'mean': [0.485, 0.456, 0.406], 'std': [0.229, 0.224, 0.225], 'path': 'Oxfords'}
 }
 
 try:
@@ -157,4 +157,5 @@ if __name__ == "__main__":
 
     os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
     processor = UniversalAccProcessor(args.dataset, args.base_path)
+
     processor.run()
