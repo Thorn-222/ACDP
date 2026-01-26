@@ -30,14 +30,14 @@ DATASET_CONFIGS = {
         'num_classes': 10,
         'mean': [0.4914, 0.4822, 0.4465],
         'std': [0.2471, 0.2435, 0.2616],
-        'relative_path': 'cifar10_extracted',
+        'relative_path': 'cifar10',
         'save_name': 'cifar10_hj.pt'
     },
     'cifar100': {
         'num_classes': 100,
         'mean': [0.5071, 0.4867, 0.4408],
         'std': [0.2675, 0.2565, 0.2761],
-        'relative_path': 'cifar100_extracted',
+        'relative_path': 'cifar100',
         'save_name': 'cifar100_hj.pt'
     },
     'mnist': {
@@ -51,21 +51,21 @@ DATASET_CONFIGS = {
         'num_classes': 10,
         'mean': [0.4377, 0.4438, 0.4728],
         'std': [0.1980, 0.2010, 0.1970],
-        'relative_path': 'svhn',
+        'relative_path': 'SVHN',
         'save_name': 'svhn_hj.pt'
     },
     'aircraft': {
         'num_classes': 100,
         'mean': [0.485, 0.456, 0.406],
         'std': [0.229, 0.224, 0.225],
-        'relative_path': 'FGVC Aircraft/images_y',
+        'relative_path': 'FGVC Aircraft',
         'save_name': 'aircraft_hj.pt'
     },
     'pets': {
         'num_classes': 37,
         'mean': [0.485, 0.456, 0.406],
         'std': [0.229, 0.224, 0.225],
-        'relative_path': 'Oxford/images',
+        'relative_path': 'Oxford',
         'save_name': 'pets_hj.pt'
     }
 }
@@ -225,4 +225,5 @@ if __name__ == "__main__":
     os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
 
     processor = UniversalZeroCostProcessor(args.dataset, args.base_path)
+
     processor.compute()
