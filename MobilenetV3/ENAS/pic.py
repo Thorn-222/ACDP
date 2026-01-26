@@ -34,7 +34,7 @@ def parse_txt(file_path):
 
 
 def plot_single_dataset(data_name):
-    base_dir = f"/home/dengjiawen/New_MetaD2A/CDAP/MobilenetV3/ENAS/{data_name}/"
+    base_dir = f"/MobilenetV3/ENAS/{data_name}/"
 
     files = {
         "CDAP": {"path": "CDAP.txt", "color": "#d62728"},
@@ -88,4 +88,5 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     for ds in args.data_name:
+
         plot_single_dataset(ds)
