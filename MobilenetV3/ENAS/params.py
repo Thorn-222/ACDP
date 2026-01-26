@@ -45,9 +45,10 @@ def count_parameters_direct(arch_config, model_path, n_cls=10, img_size=224):
 
 
 if __name__ == "__main__":
-    OFA_WEIGHTS = '/home/dengjiawen/data/ofa_mbv3_d234_e346_k357_w1.0'
+    OFA_WEIGHTS = '/MobilenetV3/data/ofa_mbv3_d234_e346_k357_w1.0'
 
     my_arch =   {"ks": [5, 7, 7, 7, 3, 7, 7, 7, 3, 5, 7, 5, 7, 7, 7, 5, 7, 3, 3, 7], "e": [4, 4, 3, 4, 3, 6, 4, 4, 4, 3, 4, 4, 4, 6, 3, 4, 4, 3, 6, 3], "d": [4, 3, 4, 4, 4]}
 
 
     count_parameters_direct(my_arch, OFA_WEIGHTS)
+
