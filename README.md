@@ -38,3 +38,8 @@ This project uses six datasets: CIFAR-10, CIFAR-100, MNIST, SVHN, FGVC-Aircraft 
 **FGVC-Aircraft:** https://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/
 
 **Oxford-IIIT Pets:** https://www.robots.ox.ac.uk/~vgg/data/pets/
+
+We provide two ways to access the experimental data:
+
+### 1. Quick Start (Pre-processed Metrics)
+
