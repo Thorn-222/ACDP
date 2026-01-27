@@ -150,7 +150,7 @@ class UniversalAccProcessor:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dataset', type=str, required=True, choices=list(DATA_CONFIG.keys()))
+    parser.add_argument('--data_name', type=str, required=True, choices=list(DATA_CONFIG.keys()))
     parser.add_argument('--gpu', type=str, default='0')
     parser.add_argument('--base_path', type=str, default='/data')
     args = parser.parse_args()
@@ -159,3 +159,4 @@ if __name__ == "__main__":
     processor = UniversalAccProcessor(args.dataset, args.base_path)
 
     processor.run()
+
