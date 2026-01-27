@@ -1,4 +1,3 @@
-
 import math
 import random
 import torch
@@ -10,10 +9,7 @@ import numpy as np
 import igraph
 from nas_201_api import NASBench201API as API201
 import copy
-
 from typing import Dict, List, Optional, Tuple
-
-
 
 class ScaledDotProductAttention(nn.Module):
     ''' Scaled Dot-Product Attention '''
