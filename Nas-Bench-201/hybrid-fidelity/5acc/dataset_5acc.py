@@ -156,7 +156,8 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
-    processor = UniversalAccProcessor(args.dataset, args.base_path)
+    processor = UniversalAccProcessor(args.data_name, args.base_path)
 
     processor.run()
+
 
