@@ -28,8 +28,13 @@ Project: https://github.com/mit-han-lab/once-for-all
 This project uses six datasets: CIFAR-10, CIFAR-100, MNIST, SVHN, FGVC-Aircraft and Oxford-IIIT Pets.
 
 **CIFAR-10:** https://www.cs.toronto.edu/~kriz/cifar.html
+
 **CIFAR-100:** https://www.cs.toronto.edu/~kriz/cifar.html
+
 **MNIST:** http://yann.lecun.com/exdb/mnist/
+
 **SVHN:** http://ufldl.stanford.edu/housenumbers/
+
 **FGVC-Aircraft:** https://www.robots.ox.ac.uk/~vgg/data/fgvc-aircraft/
+
 **Oxford-IIIT Pets:** https://www.robots.ox.ac.uk/~vgg/data/pets/
