@@ -71,5 +71,43 @@ To evaluate the overall Kendall’s Tau correlation and search for high-performi
 cd NAS-Bench-201
 python main.py --test True --data_name 'cifar10'
 ```
-Note: You can replace `cifar10` with `cifar100`, `mnist`, `svhn`, `aircraft`, or `pets` to test on other benchmarks.
+Note: Options for --data_name include [`cifar100`, `mnist`, `svhn`, `aircraft`, `pets`].
 
+## MobilenetV3
+
+The best-trained predictor weights are provided at `./MobilenetV3/results/predictor/model/ckpt_max_corr.pt.` You can use them directly for evaluation.
+
+**Train from Scratch**
+To retrain the ACDP predictor on the MobilenetV3 search space:
+
+```
+cd MobilenetV3
+python main.py --test False
+```
+
+**Evolutionary Architecture Search**
+To execute the evolutionary search process across various target datasets:
+
+```
+cd MobilenetV3
+python ENAS.py --data_name 'cifar10'
+```
+Note: Options for --data_name include [`cifar100`, `mnist`, `svhn`, `aircraft`, `pets`].
+
+**Full Training & Validation**
+To validate the ground-truth performance of the top-1 architectures discovered in each generation:
+
+```
+cd MobilenetV3/ENAS
+python run.py --data_name 'cifar10'
+```
+Note: Options for --data_name include [`cifar100`, `mnist`, `svhn`, `aircraft`, `pets`].
+
+**Cross-Dataset Baseline Comparison**
+We provide the search trajectories of baseline methods (**MetaD2A** and **DiffusionNAG**) for comparison. To visualize the comparative results:
+
+```
+cd MobilenetV3/ENAS
+python pic.py --data_name 'cifar10'
+```
+Note: Options for --data_name include [`cifar100`, `mnist`, `svhn`, `aircraft`, `pets`].
