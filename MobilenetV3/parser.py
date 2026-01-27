@@ -10,9 +10,9 @@ def get_parser():
   parser.add_argument('--seed', type=int, default=333)
   parser.add_argument('--gpu', type=str, default='3', help='set visible gpus')
   parser.add_argument('--model_name', type=str, default='predictor')
-  parser.add_argument('--save-path', type=str, default='results_yuan', help='the path of save directory')
+  parser.add_argument('--save-path', type=str, default='results', help='the path of save directory')
   parser.add_argument('--data-path', type=str, default='data', help='the path of save directory')
-  parser.add_argument('--save-epoch', type=int, default=10, help='how many epochs to wait each time to save model states')
+  parser.add_argument('--save-epoch', type=int, default=200, help='how many epochs to wait each time to save model states')
   parser.add_argument('--max-epoch', type=int, default=200, help='number of epochs to train')
   parser.add_argument('--batch_size', type=int, default=32, help='batch size for generator')
   parser.add_argument('--graph-data-name', default='nasbench201', help='graph dataset name')
@@ -33,3 +33,4 @@ def get_parser():
   args = parser.parse_args()
   
   return args
+
