@@ -43,3 +43,10 @@ We provide two ways to access the experimental data:
 
 ### 1. Quick Start (Pre-processed Metrics)
 
+All necessary metrics required for our experiments have been pre-extracted and included in the `.data/` directory of each respective search space. You can run the searching and evaluation scripts directly without downloading external datasets.
+
+### 2. Full Training (Raw Datasets)
+
+If you wish to re-evaluate or recalculate the metrics (e.g., hybrid fidelity) from scratch, the raw six datasets are required. Detailed instructions on how to set up the raw datasets and paths can be found in the` ./data/README.md`.
+
+
