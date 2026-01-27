@@ -78,6 +78,7 @@ Note: Options for --data_name include [`cifar100`, `mnist`, `svhn`, `aircraft`, 
 The best-trained predictor weights are provided at `./MobilenetV3/results/predictor/model/ckpt_max_corr.pt.` You can use them directly for evaluation.
 
 **Train from Scratch**
+
 To retrain the ACDP predictor on the MobilenetV3 search space:
 
 ```
@@ -86,6 +87,7 @@ python main.py --test False
 ```
 
 **Evolutionary Architecture Search**
+
 To execute the evolutionary search process across various target datasets:
 
 ```
@@ -95,6 +97,7 @@ python ENAS.py --data_name 'cifar10'
 Note: Options for --data_name include [`cifar100`, `mnist`, `svhn`, `aircraft`, `pets`].
 
 **Full Training & Validation**
+
 To validate the ground-truth performance of the top-1 architectures discovered in each generation:
 
 ```
@@ -104,6 +107,7 @@ python run.py --data_name 'cifar10'
 Note: Options for --data_name include [`cifar100`, `mnist`, `svhn`, `aircraft`, `pets`].
 
 **Cross-Dataset Baseline Comparison**
+
 We provide the search trajectories of baseline methods (**MetaD2A** and **DiffusionNAG**) for comparison. To visualize the comparative results:
 
 ```
