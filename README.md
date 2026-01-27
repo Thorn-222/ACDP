@@ -49,4 +49,27 @@ All necessary metrics required for our experiments have been pre-extracted and i
 
 If you wish to re-evaluate or recalculate the metrics (e.g., hybrid fidelity) from scratch, the raw six datasets are required. Detailed instructions on how to set up the raw datasets and paths can be found in the` ./data/README.md`.
 
+## Experiment
+
+## NAS-Bench-201
+
+The best-trained predictor weights are provided at `./NAS-Bench-201/results/predictor/model/ckpt_max_corr.pt.` You can use them directly for evaluation.
+
+**Train from Scratch**
+To retrain the ACDP predictor on the NAS-Bench-201 search space:
+
+```
+cd NAS-Bench-201
+python main.py --test False
+```
+
+**Evaluation & Search**
+
+To evaluate the overall Kendall’s Tau correlation and search for high-performing architectures across different datasets:
+
+```
+cd NAS-Bench-201
+python main.py --test True --data_name 'cifar10'
+```
+Note: You can replace `cifar10` with `cifar100`, `mnist`, `svhn`, `aircraft`, or `pets` to test on other benchmarks.
 
