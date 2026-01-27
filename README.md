@@ -47,7 +47,7 @@ All necessary metrics required for our experiments have been pre-extracted and i
 
 ### 2. Full Training (Raw Datasets)
 
-If you wish to re-evaluate or recalculate the metrics (e.g., hybrid fidelity) from scratch, the raw six datasets are required. Detailed instructions on how to set up the raw datasets and paths can be found in the` ./data/README.md`.
+If you wish to re-evaluate or recalculate the metrics (e.g., hybrid fidelity) from scratch, the raw six datasets are required. Detailed instructions on how to set up the raw datasets and paths can be found in the` ./data/readme.md`.
 
 ## Experiment
 
