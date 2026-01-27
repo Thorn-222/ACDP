@@ -215,8 +215,7 @@ class UniversalZeroCostProcessor:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='NAS-Bench-201 hook_logdet metric calculation script')
-    parser.add_argument('--dataset', type=str, required=True,
-                        help='cifar10, cifar100, mnist, svhn, aircraft, pets')
+    parser.add_argument('--data_name', type=str, required=True,help='cifar10, cifar100, mnist, svhn, aircraft, pets')
     parser.add_argument('--base_path', type=str, default='data', help='Dataset root directory')
     parser.add_argument('--gpu', type=str, default='0')
 
@@ -224,6 +223,7 @@ if __name__ == "__main__":
 
     os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
 
-    processor = UniversalZeroCostProcessor(args.dataset, args.base_path)
+    processor = UniversalZeroCostProcessor(args.data_name, args.base_path)
 
     processor.compute()
+
