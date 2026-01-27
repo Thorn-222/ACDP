@@ -7,7 +7,7 @@ All data is serialized and stored within the `.data/` directory of each respecti
 `{search_space_root}/data/{dataset}_data.pt`
 
 The supported datasets are categorized based on their roles in the ACDP framework:
-- **Training Dataset**: `imagenet` (used as the primary domain for ACDP proxy optimization).
+- **Training Dataset**: `ImageNet` (used as the primary domain for ACDP proxy optimization).
 - **Unseen Evaluation Datasets**: `cifar10`, `cifar100`, `mnist`, `svhn`, `pets`, and `aircraft` (used to evaluate the generalization capability of ACDP).
 
 ## Reproduction & Custom Training
@@ -33,7 +33,7 @@ Once the raw datasets are configured, you can compute the hybrid-fidelity featur
 
 We provide separate scripts for the proxy training set (ImageNet) and the six downstream validation datasets.
 
-** 5acc computation**
+**5acc computation**
 
 ```
 cd Nas-Bench-201/hybrid-fidelity/5acc
@@ -43,7 +43,7 @@ python imagenet_5acc.py
 python dataset_5acc.py --data_name 'cifar10'
 ```
 
-** hj computation**
+**hj computation**
 
 ```
 cd Nas-Bench-201/hybrid-fidelity/hj
@@ -58,13 +58,13 @@ Note: Options for --data_name include [`cifar100`, `mnist`, `svhn`, `aircraft`, 
 
 Due to the vast nature of the MobilenetV3 search space, we utilize an evolutionary strategy. For this space, hybrid fidelity is computed on the ImageNet to train ACDP.
 
-** 5acc computation**
+**5acc computation**
 ```
 cd MobilenetV3/hybrid-fidelity
 python imagenet_5acc.py
 ```
 
-** hj computation**
+**hj computation**
 ```
 cd MobilenetV3/hybrid-fidelity
 python imagenet_hj.py
