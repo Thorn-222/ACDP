@@ -306,7 +306,7 @@ class Predictor:
     elif (data_name == 'svhn'):
       seeds = (927,877,2677)
     elif (data_name == 'aircraft'):
-      seeds = (731,444,108)
+      seeds = (731,9283,108)
     elif (data_name == 'pets'):
       seeds = (937,2983,9811)
     train_single_model(save_dir=meta_test_path,
